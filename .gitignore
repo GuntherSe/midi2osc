@@ -1,0 +1,10 @@
+__pycache__/
+.vscode/
+logs/
+
+*.dat
+*.bak
+*.dir
+
+todo.txt
+test*
