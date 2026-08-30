@@ -32,7 +32,7 @@ class Gui:
 
         # Main-Window:        
         self.root.title ("Midi 2 OSC")
-        self.root.geometry("640x360+30+30")
+        self.root.geometry("640x400+30+30")
         self.root.columnconfigure (0, weight=1)
         self.root.rowconfigure (0, weight=1)
         self._job = None # siehe self.keep_connected() und self.disconnect()

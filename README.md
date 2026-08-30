@@ -11,23 +11,24 @@ This program is intended to support a lightdesk like Chamsys consoles with an ad
 ## Installation
 
 Python best practice is to create a project-specific `virtual environment`, for example in the current working directory. 
-T create a virtual environment called *.venv* in Windows, run the command:
+For the start scripts create a virtual environment called *.venv*.
+Switch to the working directory where you cloned the repository.
+
+### Windows: 
 
     py -m venv .venv
-
-To activate this environment, run:
-
     .venv\Scripts\activate
-
-Then, install the requred packages, listed in requirements.txt:
-
     py -m pip install -r requirements.txt
+
+### Linux
+
+    python3 -m venv .venv
+    source .venv/bin/activate
+    python -m pip install -r requirements.txt
 
 ## Run
 
-In a terminal, run:
-
-    m2o.bat
+In a Windows terminal run  `m2o.bat`, in a Linux terminal run `m2o.sh`. 
 
 
 
