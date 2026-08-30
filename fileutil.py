@@ -70,7 +70,7 @@ return: Dict mit allen Subdirs in Liste, dann alle Dateien in Liste
 
 if __name__ == "__main__":
 
-    print (f"python files: {list_files ("py")}")
-    print (f"csv files: {list_files ("csv")}")
     print (f"all files: {list_files ()}")
+    print (f"python files: {list_files ('py')}")
+    print (f"csv files: {list_files ('csv')}")
     
