@@ -42,10 +42,10 @@ def get_curdir (spath:str='.', basedir:str='') ->str:
 
 def list_files (ftype:str="" ) ->list:
     """ list directory 'path' mit Dateityp 'ftype'
-spath: z.B. '.', 'subdir', ...
-ftype: Dateiendung, Groß-/Kleinschreibung egal, '.xyz' oder 'xyz'
-return: Dict mit allen Subdirs in Liste, dann alle Dateien in Liste
-"""
+
+    ftype:  Dateiendung, Groß-/Kleinschreibung egal, '.xyz' oder 'xyz'
+    return: alle Dateien in Liste
+    """
     filelist = []
 
     if ftype:

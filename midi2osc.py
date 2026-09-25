@@ -85,7 +85,8 @@ class Midicontroller (threading.Thread):
         try:
             self.port = mido.open_input (self.devicename) # type: ignore
         except:
-            print ("Midicontroller nicht gefunden.")
+            if self.devicename != "":
+                print ("Midicontroller nicht gefunden.")
 
         self.daemon = True
         self.start ()

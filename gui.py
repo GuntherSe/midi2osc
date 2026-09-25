@@ -32,7 +32,7 @@ class Gui:
 
         # Main-Window:        
         self.root.title ("Midi 2 OSC")
-        self.root.geometry("640x400+30+30")
+        self.root.geometry("640x480+30+30")
         self.root.columnconfigure (0, weight=1)
         self.root.rowconfigure (0, weight=1)
         self._job = None # siehe self.keep_connected() und self.disconnect()
@@ -95,6 +95,7 @@ class Gui:
 
 # class MidiFrame: ------------------------------------------------------------------------
 class MidiFrame (ttk.Frame):
+    """ widgets with Midi context """
     def __init__(self, parent):
         ttk.Frame.__init__(self, parent)
         self.container = parent
@@ -139,6 +140,7 @@ class MidiFrame (ttk.Frame):
         
 # class OscFrame: ------------------------------------------------------------------------
 class OscFrame (ttk.Frame):
+    """ widgets with OSC context """
     def __init__(self, parent):
         ttk.Frame.__init__(self, parent)
         self.container = parent

@@ -22,6 +22,13 @@ Switch to the working directory where you cloned the repository.
 
 ### Linux
 
+You have to install Tkinter:
+
+    sudo apt update
+    sudo apt install python3-tk
+
+Now, install the Python-specific modules:
+
     python3 -m venv .venv
     source .venv/bin/activate
     python -m pip install -r requirements.txt
