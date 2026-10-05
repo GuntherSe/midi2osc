@@ -32,7 +32,7 @@ class Gui:
 
         # Main-Window:        
         self.root.title ("Midi 2 OSC")
-        self.root.geometry("640x480+30+30")
+        self.root.geometry("640x400+30+30")
         self.root.columnconfigure (0, weight=1)
         self.root.rowconfigure (0, weight=1)
         self._job = None # siehe self.keep_connected() und self.disconnect()
@@ -70,7 +70,7 @@ class Gui:
         # Message-Box
         self.msgcontent = tk.StringVar()
         self.msgframe = ttk.Frame (self.content, borderwidth=5)
-        self.msgframe["height"] = 30
+        self.msgframe["height"] = 40
         self.msglab = ttk.Label (self.msgframe, textvariable=self.msgcontent)
         self.msgframe.grid (row=4, column=0, columnspan=2, 
                             sticky="W,E", padx=5, pady=10) 

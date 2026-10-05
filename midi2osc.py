@@ -9,6 +9,7 @@ Start this module!
 import mido
 import sys
 import shelve
+import time
 # import queue
 import threading
 from pythonosc import udp_client
@@ -121,6 +122,7 @@ class Midicontroller (threading.Thread):
             if self.port is not None:
                 for msg in self.port.iter_pending ():
                     self.eval_msg (msg)
+            time.sleep (0.05)
 
     
 
