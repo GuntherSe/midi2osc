@@ -152,13 +152,17 @@ def eval_midi (args):
     """ Midi Auswerte-Funktion """
     gui.midiinfo.midimonitor.insert ("1.0", "\n")
     gui.midiinfo.midimonitor.insert ("1.0", args)
-    control = args.control
-    value   = args.value
-    # print (f"Message:{control}, {value}")
-    if control in cv.controllers:
-        gui.message (f"{cv.converter(control)}, {float (int(value) / 127)}")
-        osc.send_message (cv.converter(control), float (int(value) / 127))
+    try:
+        control = args.control
+        value   = args.value
+        # print (f"Message:{control}, {value}")
+        if control in cv.controllers:
+            gui.message (f"{cv.converter(control)}, {float (int(value) / 127)}")
+            osc.send_message (cv.converter(control), float (int(value) / 127))
+    except:
+        return
 
+    
 mc.set_eval_function (eval_midi)
 
 # converter:
